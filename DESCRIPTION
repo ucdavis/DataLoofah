@@ -26,3 +26,5 @@ Imports:
     slickR,
     svglite,
     tibble
+URL: https://github.com/mponzini/DataLoofah
+BugReports: https://github.com/mponzini/DataLoofah/issues
