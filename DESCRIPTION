@@ -1,12 +1,28 @@
 Package: DataLoofah
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Data Loofah Shiny App for Data Summaries
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Matthew", "Ponzini", , "dataloofah@ucdavis.edu", role = c("aut", "cre"))
+Description: Data Loofah Shiny app enables investigators to upload their
+    data for automatic generation of summary tables and figures. Through
+    examination of these tables and figures, investigators can use their
+    domain expertise to identify potential data errors and rectify prior
+    to analysis.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    arsenal,
+    dplyr,
+    DT,
+    fresh,
+    ggplot2,
+    haven,
+    openxlsx,
+    pacman,
+    readxl,
+    shiny,
+    slickR,
+    svglite,
+    tibble
