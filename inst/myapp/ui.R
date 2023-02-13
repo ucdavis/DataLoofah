@@ -95,7 +95,7 @@ ui <- navbarPage(
                   " later point in time, the summary tables can be downloaded",
                   " to a CSV or Excel file by clicking the ", tags$b("Download"),
                   " button at the top of each summary table."),
-          tags$li("A more detailed manual and demonstration videos are availbe ",
+          tags$li("A more detailed manual and demonstration videos are available ",
                   "on our ",
                   tags$a(href="https://health.ucdavis.edu/ctsc/area/biostatistics/data-loofah-tool.html",
                          "webpage"), ".")
