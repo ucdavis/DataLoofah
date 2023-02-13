@@ -1,0 +1,16 @@
+# DataLoofah
+Data Loofah Shiny App for Data Summaries
+
+# How to install
+Install `devtools`, install.packages("devtools")
+Use `devtools::install_github("mponzini/DataLoofah")` to install the DataLoofah package
+
+# How to run the Data Loofah
+Run the `DataLoofah::runDataLoofah()` function
+
+
+```r
+install.packages("devtools")
+devtools::install_github("mponzini/DataLoofah")
+DataLoofah::runDataLoofah()
+```
