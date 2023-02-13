@@ -14,3 +14,5 @@ install.packages("devtools")
 devtools::install_github("mponzini/DataLoofah")
 DataLoofah::runDataLoofah()
 ```
+# Modifying the Data Loofah  
+If you wish to modify the Data Loofah, the ui and server files are located in inst/myapp.  
