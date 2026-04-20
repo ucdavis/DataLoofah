@@ -2,23 +2,45 @@ pacman::p_load(dplyr, tibble, ggplot2, shiny, DT, arsenal, openxlsx, readxl,
                svglite, slickR, haven, fresh)
 
 ui <- navbarPage(
-  # add favicon to browser tab
-  tags$head(tags$link(rel="shortcut icon", href="favicon.png")),
+  # set Lnaguage
+  lang = "en",
   # tags$head(tags$link(rel="shortcut icon", href="favicon.ico")),
   # replace title with logo on navbar
-  title = div(img(src="CTSC_Data_Loofah_Icon.png",
+  title = div(img(src="CTSC_Data_Loofah_Icon.png", alt = "Data Loofah Logo",
                   width = "90px", height = "60px")),
   # title in browser tab
   windowTitle = "CTSC Data Loofah",
   # adjust dimensions of navbar to accommodate logo
-  header = use_theme(
-    create_theme(
-      theme = "default",
-      bs_vars_navbar(
-        height = "90px",
-        margin_bottom = "15px",
-        padding_vertical = "15px"
-
+  header = tagList(
+    # add favicon to browser tab
+    tags$head(tags$link(rel="shortcut icon", href="favicon.png")),
+    fresh::use_theme(
+      fresh::create_theme(
+        # theme = "cerulean",
+        fresh::bs_vars_navbar(
+          height = "120px",
+          margin_bottom = "15px",
+          padding_vertical = "15px",
+          default_bg = "#022851",
+          default_color = "#FFFFFF",
+          default_link_active_bg = "#022851",
+          default_link_active_color = "#FFBF00",
+          default_link_color = "#FFFFFF",
+          default_link_hover_color = "#FFDC00"
+        ),
+        fresh::bs_vars_font(
+          size_base = "20px",
+          size_h1 = "28px",
+          size_h3 = "28px"
+        ),
+        fresh::bs_vars_tabs(
+          active_link_hover_bg = "#022851",
+          active_link_hover_color = "#FFFFFF",
+          link_hover_border_color = "#008EAA"
+        ),
+        fresh::bs_vars_color(
+          brand_primary = "#022851"
+        )
       )
     )
   ),
@@ -28,7 +50,7 @@ ui <- navbarPage(
 
     fluidPage(
       fluidRow(
-        h3("Purpose"),
+        h1("Purpose"),
         p("The purpose of this tool is to ",
           "investigate the data and its quality prior to analysis. The ",
           "goal is to catch data issues such as:"),
@@ -54,7 +76,7 @@ ui <- navbarPage(
           "create final summary statistics! Rather, this tool is to ",
           "help the user identify potential data errors that then ",
           "need to be corrected prior to conducting statistical analyses."),
-        h3("Instructions"),
+        h1("Instructions"),
         tags$ul(
           tags$li("To import your data go to the ", tags$b("Data Import"),
                   " tab and click ", tags$b("Browse"),
@@ -96,9 +118,12 @@ ui <- navbarPage(
                   " to a CSV or Excel file by clicking the ", tags$b("Download"),
                   " button at the top of each summary table."),
           tags$li("A more detailed manual and demonstration videos are available ",
-                  "on our ",
-                  tags$a(href="https://health.ucdavis.edu/ctsc/area/biostatistics/data-loofah-tool.html",
-                         "webpage"), ".")
+                  "on the ",
+                  tags$a(
+                    href="https://health.ucdavis.edu/ctsc/area/biostatistics/data-loofah-tool.html",
+                    "CTSC Data Loofah webpage"
+                  ),
+                  ".")
         )
       )
     )
