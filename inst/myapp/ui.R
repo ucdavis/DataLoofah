@@ -53,7 +53,8 @@ ui <- navbarPage(
         h1("Purpose"),
         p("The purpose of this tool is to ",
           "investigate the data and its quality prior to analysis. The ",
-          "goal is to catch data issues such as:"),
+          "goal is to catch data issues such as:",
+          style = "line-height: 1.5;"),
 
         tags$ul(
           tags$li("numeric variables stored as text (e.g. numbers with a",
@@ -75,7 +76,8 @@ ui <- navbarPage(
         p("This tool is not meant to ",
           "create final summary statistics! Rather, this tool is to ",
           "help the user identify potential data errors that then ",
-          "need to be corrected prior to conducting statistical analyses."),
+          "need to be corrected prior to conducting statistical analyses.",
+          style = "line-height: 1.5;"),
         h1("Instructions"),
         tags$ul(
           tags$li("To import your data go to the ", tags$b("Data Import"),
