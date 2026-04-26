@@ -1,6 +1,6 @@
 Package: DataLoofah
 Title: Data Loofah Shiny App for Data Summaries
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Matthew", "Ponzini", , "dataloofah@ucdavis.edu", role = c("aut", "cre"))
 Description: Data Loofah Shiny app enables investigators to upload their
